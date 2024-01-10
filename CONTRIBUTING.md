@@ -88,16 +88,33 @@ We appreciate as much detail as possible so we can replicate and address the bug
    ```
 7. Submit a pull request through the GitHub website.
 
+## Tips
+
+To run a subset of tests:
+
+```
+py.test tests.test_convertempPy
+```
+
+## Deploying
+
+A reminder for the maintainers on how to deploy:
+
+* Ensure the following secrets are recorded on GitHub:
+  * CODECOV_TOKEN
+  * PYPI_USERNAME
+  * PYPI_PASSWORD
+
+GitHub Actions should build and deploy to testPyPI when a pull request is merged into master.
+
 ## A Friendly Reminder
 
 Remember, doeasyeda is a community-driven project. Your contributions, whether large or small, are incredibly valuable to us. We strive to create a welcoming and inclusive environment, so we encourage you to join us in developing this project!
 
+## Code of Conduct
+
+Please note that this project is released with a [Code of Conduct](https://github.com/UBC-MDS/doeasyeda/blob/main/CONDUCT.md). By contributing to this project you agree to abide by its terms.
+
 ### Attribution
 
 - This contributing guide is inspired by the contributing guidelines of [convertempPy](https://github.com/ttimbers/convertempPy/blob/master/CONTRIBUTING.md) and [py-pkgs-cookiecutter](https://github.com/py-pkgs/py-pkgs-cookiecutter/blob/main/CONTRIBUTING.md). Feel free to adapt and improve it as needed for the this project.
-
-## Questions or Suggestions?
-
-- If you have questions or suggestions, please file an issue with the tag "question" or "suggestion".
-
-We appreciate your interest in contributing to doeasyeda. Your contributions are highly valued and play a vital role in the success of this project.
