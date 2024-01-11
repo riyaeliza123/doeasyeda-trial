@@ -1,10 +1,41 @@
 # Contributing to doeasyeda
 
-We are thrilled that you're interested in contributing to doeasyeda! Your contributions are invaluable to us, and we are committed to acknowledging your efforts and ensuring you receive proper credit for your work.
+## Table of Contents
 
-## Ways to Contribute
+1. [Internal Contribution Strategies](#Internal-Contribution-Strategies)
+2. [External Contribution Guidelines](#External-Contribution-Guidelines)
+3. [Get Started!](#Get-Started!)
+4. [Code of Conduct](#Code-of-Conduct-)
+5. [Attribution](#Attribution)
 
-There are several ways you can contribute to our project, each significant and appreciated:
+## Internal Contribution Strategies
+
+Our collaboration strategy is designed to leverage GitHub's project management tools to ensure an organized, transparent, and efficient workflow. We aim to foster a cooperative environment where every team member is clear on their responsibilities and feels comfortable contributing to discussions.
+
+**Project Management:**
+
+* **GitHub Project Dashboard:** We will utilize the GitHub Project Dashboard to distribute tasks and track progress. Each milestone will be broken down into smaller tasks, represented by cards on the dashboard. Team members will be able to see who is working on what and the current status of all tasks.
+* **Issues and Milestones:** Each task will be associated with a GitHub Issue. These issues will be assigned to individual contributors and linked to specific milestones. This ensures that all tasks are accounted for and progress can be tracked toward our overall goals.
+* **Documentation:** All code will be well-documented to maintain clarity and facilitate ease of understanding for current and future contributors. Documentation will include comments within the code, as well as README files and wikis where appropriate.
+* **Labeling:** We will use GitHub's labeling system to categorize issues and pull requests. This will help us quickly identify the state of a task, whether it's a bug, enhancement, question, or a task related to a specific feature or milestone.
+* **Open Discussion:** Team members are encouraged to engage in discussions within issue threads and pull requests. This open dialogue will promote idea sharing and collective problem-solving.
+
+**Code Programming and Reviewing:**
+
+* **GitHub Code Review Function:** All contributions will be submitted via pull requests and subject to review using GitHub's code review function. This allows team members to provide feedback on the changes, suggest improvements, and ensure that all code adheres to our standards before merging.
+
+**Rotating Roles:**
+
+To provide all team members with the opportunity to lead and learn, we will rotate key roles on a weekly basis. These roles include project management and final submission supervision.
+
+* **Project Manager:** The project manager will be responsible for organizing and documenting meetings, updating the GitHub Project Dashboard, and ensuring that all team members have the resources they need. Meeting notes will be recorded and made available through GitHub Issues for transparency.
+* **Final Submission Supervisor:** The supervisor's duties include overseeing quality assurance, ensuring that milestones are met, reviewing open issues and pull requests, and verifying that the project meets all criteria for reproducibility and transparency.
+
+By adhering to these strategies, we aim to create a dynamic and responsive team environment that not only meets but exceeds our project objectives. Each member's contribution is vital to the success of the project, and through this structured yet flexible approach, we will collectively ensure the highest standards of quality and collaboration.
+
+## External Contribution Guidelines
+
+We are thrilled that you're interested in contributing to doeasyeda! Your contributions are invaluable to us, and we are committed to acknowledging your efforts and ensuring you receive proper credit for your work. There are several ways you can contribute to our project, each significant and appreciated:
 
 ### 1. Reporting Bugs 🐛
 
@@ -88,7 +119,7 @@ We appreciate as much detail as possible so we can replicate and address the bug
    ```
 7. Submit a pull request through the GitHub website.
 
-## Tips
+### Tips
 
 To run a subset of tests:
 
@@ -96,7 +127,7 @@ To run a subset of tests:
 py.test tests.test_convertempPy
 ```
 
-## Deploying
+### Deploying
 
 A reminder for the maintainers on how to deploy:
 
@@ -107,7 +138,7 @@ A reminder for the maintainers on how to deploy:
 
 GitHub Actions should build and deploy to testPyPI when a pull request is merged into master.
 
-## A Friendly Reminder
+### A Friendly Reminder
 
 Remember, doeasyeda is a community-driven project. Your contributions, whether large or small, are incredibly valuable to us. We strive to create a welcoming and inclusive environment, so we encourage you to join us in developing this project!
 
