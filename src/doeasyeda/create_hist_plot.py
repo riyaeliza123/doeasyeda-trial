@@ -7,22 +7,22 @@ class DoEasyEDAException(Exception):
         self.original_exception = original_exception
 
 
-def create_scatter_plot(df, x_col, y_col, size=60, color=None, title=None,
+def create_hist_plot(df, x_col, y_col, barSize=10, color=None, title=None,
                         x_title=None, y_title=None, tooltip=None,
                         interactive=False, width=None, height=None):
     """
-    Creates a scatter plot using Altair with customizable options.
+    Creates a histogram using Altair with customizable options.
 
     Parameters
     ----------
     df : pd.DataFrame
-        Dataframe containing the data for the scatter plot.
+        Dataframe containing the data for the histogram.
     x_col : str
         The column name to be used for the x-axis.
     y_col : str
         The column name to be used for the y-axis.
-    size : int, optional
-        The size of the scatter plot markers (default is 60).
+    barSize : int, optional
+        The size of the bar in the histogram (default is 10).
     color : str, optional
         The column name to be used for color encoding (default is None).
     title : str, optional
@@ -61,7 +61,7 @@ def create_scatter_plot(df, x_col, y_col, size=60, color=None, title=None,
 
     try:
         # Set Altair base chart
-        chart = alt.Chart(df).mark_circle(size=size)
+        chart = alt.Chart(df).mark_bar(barSize=barSize)
 
         # Set Altair encoding with optional color and tooltip
         encoding = {
