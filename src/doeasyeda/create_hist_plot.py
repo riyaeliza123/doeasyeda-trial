@@ -7,7 +7,7 @@ class DoEasyEDAException(Exception):
         self.original_exception = original_exception
 
 
-def create_hist_plot(df, x_col, y_col, barSize=10, color=None, title=None,
+def create_hist_plot(df, x_col, y_col, color=None, title=None,
                         x_title=None, y_title=None, tooltip=None,
                         interactive=False, width=None, height=None):
     """
@@ -21,8 +21,6 @@ def create_hist_plot(df, x_col, y_col, barSize=10, color=None, title=None,
         The column name to be used for the x-axis.
     y_col : str
         The column name to be used for the y-axis.
-    barSize : int, optional
-        The size of the bar in the histogram (default is 10).
     color : str, optional
         The column name to be used for color encoding (default is None).
     title : str, optional
@@ -61,7 +59,7 @@ def create_hist_plot(df, x_col, y_col, barSize=10, color=None, title=None,
 
     try:
         # Set Altair base chart
-        chart = alt.Chart(df).mark_bar(barSize=barSize)
+        chart = alt.Chart(df).mark_bar()
 
         # Set Altair encoding with optional color and tooltip
         encoding = {
@@ -89,3 +87,4 @@ def create_hist_plot(df, x_col, y_col, barSize=10, color=None, title=None,
     except Exception as e:
         # Error Handling
         raise DoEasyEDAException("Error in creating scatter plot", e)
+
