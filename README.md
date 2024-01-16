@@ -19,7 +19,7 @@
 
 ## Contributors
 
-[Riya Eliza](https://github.com/riyaeliza123), [Hina Bandukwala]([hbandukw](https://github.com/hbandukw)), [Dan Zhang](https://github.com/wqxxzd) and [Doris Wang](https://github.com/MDSFusionist)
+[Riya Eliza](https://github.com/riyaeliza123), [Hina Bandukwala](https://github.com/hbandukw), [Dan Zhang](https://github.com/wqxxzd) and [Doris Wang](https://github.com/MDSFusionist)
 
 ## Installation
 
@@ -43,7 +43,6 @@ $ pip install doeasyeda
 * **Focus on Standard EDA Plots** : The package emphasizes standard EDA plots, ensuring that users can cover the fundamental aspects of data visualization in their analysis.
 
 ## Dependencies
-
 
 ## Usage
 
