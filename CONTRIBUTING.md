@@ -86,7 +86,7 @@ We appreciate as much detail as possible so we can replicate and address the bug
 
 ## Get Started!
 
-1. Fork the `convertempPy` repo on GitHub.
+1. Fork the `doeasyeda` repo on GitHub.
 2. Clone your fork locally:
 
    ```
