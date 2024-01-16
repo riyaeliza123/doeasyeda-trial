@@ -1,17 +1,10 @@
-#%%
 import altair as alt
-#%%
-import pandas as pd 
-df = pd.read_csv("/Users/hinabandukwala/Documents/MDS/block_4/524/doeasyeda/data/gapminder.csv")
-
-#%%
-# Define custom error handling
 class DoEasyEDAException(Exception):
     def __init__(self, message, original_exception):
         super().__init__(f"{message}: {original_exception}")
         self.original_exception = original_exception
 
-#%%
+
 def create_line_plot(df, x_col, y_col, size=1, color=None, title=None,
                         x_title=None, y_title=None, tooltip=None,
                         interactive=False, width=None, height=None):
@@ -94,5 +87,3 @@ def create_line_plot(df, x_col, y_col, size=1, color=None, title=None,
     except Exception as e:
         # Error Handling
         raise DoEasyEDAException("Error in creating line plot", e)
-
-# %%
