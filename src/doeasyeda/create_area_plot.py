@@ -8,7 +8,7 @@ class DoEasyEDAException(Exception):
         self.original_exception = original_exception
 
 
-def create_area_plot(df, x_col, y_col, line=False, point=False, color=None, title=None,
+def create_area_plot(df, x_col, y_col, color=None, title=None,
                         x_title=None, y_title=None, tooltip=None,
                         interactive=False, width=None, height=None):
     """
@@ -66,7 +66,7 @@ def create_area_plot(df, x_col, y_col, line=False, point=False, color=None, titl
 
     try:
         # Set Altair base chart
-        chart = alt.Chart(df).mark_area(line=False, point=False)
+        chart = alt.Chart(df).mark_area()
 
         # Set Altair encoding with optional color and tooltip
         encoding = {
