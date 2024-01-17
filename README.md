@@ -27,12 +27,29 @@
 $ pip install doeasyeda
 ```
 
-## Functions
+## Package Content
 
-* **create_hist_plot(df, cols, config=None)** : Generates a histogram plot for specified columns in a DataFrame, with an optional `config` dictionary to customize aspects like chart title, axis labels, and bin sizes, using Altair.
-* **create_scatter_plot(df, cols, config=None)** : Creates a scatter plot for chosen DataFrame columns, allowing customization through an optional `config` parameter for setting chart title, axis labels, and color schemes, rendered using Altair.
-* **create_line_plot(df, cols, config=None)** : Develops a line plot using selected columns in a DataFrame, featuring an optional `config` parameter to customize the plot's appearance, including chart title, axis labels, and color schemes, using Altair.
-* **create_area_plot(df, cols, config=None)** : Produces an area plot for designated columns in a DataFrame, with an optional `config` for detailed plot customization such as chart title, axis labels, and color schemes, visualized using Altair.
+This package offers four primary functions, each harnessing the power of the Altair visualization library to create distinct types of plots. These functions provide extensive customization options to cater to diverse data visualization needs.
+
+### Functions:
+
+This package includes four main function: 
+
+1. `create_scatter_plot(df, x_col, y_col, size=60, color=None, title=None, x_title=None, y_title=None, tooltip=None, interactive=False, width=None, height=None)`: Generates a scatter plot using the Altair visualization library with various customization options.
+2. `create_hist_plot(df, x_col, y_col, color=None, title=None, x_title=None, y_title=None, tooltip=None, interactive=False, width=None, height=None)`: Generates histogram using the Altair visualization library with various customization options.
+3. `create_line_plot(df, x_col, y_col, size=1, color=None, title=None, x_title=None, y_title=None, tooltip=None, interactive=False, width=None, height=None)`: Generates a line plot using the Altair visualization library with various customization options.
+4. `create_area_plot(df, x_col, y_col, color=None, title=None, x_title=None, y_title=None, tooltip=None, interactive=False, width=None, height=None)`: Generates an area plot using the Altair visualization library with various customization options.
+
+### Common Parameters:
+
+* `df` (pd.DataFrame): The DataFrame containing the data for visualization.
+* `x_col`, `y_col` (str): Names of the columns to be used for the x and y axes, respectively.
+* `color` (str, optional): Column name for color encoding, defaults to `None`.
+* `size` (int, optional): Marker size, default 60.
+* `title`, `x_title`, `y_title` (str, optional): Titles for the plot and axes, default `None`.
+* `tooltip` (list of str, optional): List of column names for tooltips, defaults to `None`.
+* `interactive` (bool, optional): If `True`, enables interactive features such as zooming and panning, defaults to `False`.
+* `width`, `height` (int, optional): Dimensions of the chart, defaults to `None`.
 
 ## Why doeasyeda?
 
