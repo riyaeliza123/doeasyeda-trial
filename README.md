@@ -67,6 +67,24 @@ Our package primarily utilizes the gapminder dataset to demonstrate the effectiv
 
 Below is a simple quick start example:
 
+## Developer Note
+
+Direct to the root of the project repository
+
+1. To create a new virtual environment in Conda with Python, use the following commands in the terminal :
+```
+$ conda create --name doeasyeda python=3.12 -y
+```
+2. To use this new environment for developing, we need to activate the virtual environment:
+```
+$ conda activate doeasyeda
+```
+3. To install the needed packages via poetry, run the following command. If poetry hasn't been set up yet, please following [this link](https://python-poetry.org/docs/) for installtion.
+```
+$ poetry install
+```
+4. The set up is done, you are free to use the doeasyeda package now! Please check the function section above on how to use the package.
+
 ## Documentation
 
 Online documentation can be found [here]().
