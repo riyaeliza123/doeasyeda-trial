@@ -4,7 +4,7 @@
     <img src="img/logo2.png" alt="Alt text for image" width="200" height="200">
 </figure>
 
-[![ci-cd](https://github.com/UBC-MDS/doeasyeda/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/doeasyeda/actions/workflows/ci-cd.yml) [![Python 3.11+](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-390/) [![codecov](https://codecov.io/gh/UBC-MDS/doeasyeda/branch/main/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/doeasyeda) [![Documentation Status](https://readthedocs.org/projects/stock_analyzer/badge/?version=latest)](https://doeasyeda.readthedocs.io/en/latest/?badge=latest) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![version](https://img.shields.io/github/v/release/UBC-MDS/doeasyeda) ![release](https://img.shields.io/github/release-date/UBC-MDS/doeasyeda)
+[![ci-cd](https://github.com/UBC-MDS/doeasyeda/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/doeasyeda/actions/workflows/ci-cd.yml) [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-390/) [![codecov](https://codecov.io/gh/UBC-MDS/doeasyeda/branch/main/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/doeasyeda) [![Documentation Status](https://readthedocs.org/projects/stock_analyzer/badge/?version=latest)](https://doeasyeda.readthedocs.io/en/latest/?badge=latest) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![version](https://img.shields.io/github/v/release/UBC-MDS/doeasyeda) ![release](https://img.shields.io/github/release-date/UBC-MDS/doeasyeda)
 
 **doeasyeda** offers user-friendly functions for creating standard EDA plots for your data.
 ---------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ This package offers four primary functions, each harnessing the power of the Alt
 
 ### Functions:
 
-This package includes four main function: 
+This package includes four main function:
 
 1. `create_scatter_plot(df, x_col, y_col, size=60, color=None, title=None, x_title=None, y_title=None, tooltip=None, interactive=False, width=None, height=None)`: Generates a scatter plot using the Altair visualization library with various customization options.
 2. `create_hist_plot(df, x_col, y_col, color=None, title=None, x_title=None, y_title=None, tooltip=None, interactive=False, width=None, height=None)`: Generates histogram using the Altair visualization library with various customization options.
@@ -59,7 +59,29 @@ This package includes four main function:
 * **Versatile Plotting Functions** : The package includes a variety of plotting functions, each tailored to display data effectively. These functions cater to different data types and visualization needs.
 * **Focus on Standard EDA Plots** : The package emphasizes standard EDA plots, ensuring that users can cover the fundamental aspects of data visualization in their analysis.
 
-## Dependencies
+## Developer Note
+
+Direct to the root of the project repository
+
+1. To create a new virtual environment in Conda with Python, use the following commands in the terminal :
+
+```
+$ conda create --name doeasyeda python=3.12 -y
+```
+
+2. To use this new environment for developing, we need to activate the virtual environment:
+
+```
+$ conda activate doeasyeda
+```
+
+3. To install the needed packages via poetry, run the following command. If poetry hasn't been set up yet, please following [this link](https://python-poetry.org/docs/) for installtion.
+
+```
+$ poetry install
+```
+
+4. The set up is done, you are free to use the doeasyeda package now! Please check the function section above on how to use the package.
 
 ## Usage
 
@@ -67,23 +89,54 @@ Our package primarily utilizes the gapminder dataset to demonstrate the effectiv
 
 Below is a simple quick start example:
 
-## Developer Note
+```
+import altair as alt
+import pandas as pd
 
-Direct to the root of the project repository
+from doeasyeda.create_scatter_plot import create_scatter_plot
+from doeasyeda.create_line_plot import create_line_plot
+from doeasyeda.create_hist_plot import create_hist_plot
+from doeasyeda.create_area_plot import create_area_plot
 
-1. To create a new virtual environment in Conda with Python, use the following commands in the terminal :
+df = pd.read_csv('gapminder.csv')
 ```
-$ conda create --name doeasyeda python=3.12 -y
+
+**Creating scatter plot:**
+
 ```
-2. To use this new environment for developing, we need to activate the virtual environment:
+create_scatter_plot(df, 'continent', 'lifeExp', color='continent', 
+                    title='Life Exp by Continent', x_title= 'Continent', y_title='Life Exp')
 ```
-$ conda activate doeasyeda
+<img src="./img/scatterplot.png" height="300">
+
+**Creating histogram:**
+
 ```
-3. To install the needed packages via poetry, run the following command. If poetry hasn't been set up yet, please following [this link](https://python-poetry.org/docs/) for installtion.
+df_grouped1 = df.groupby(['continent'])['lifeExp'].sum().reset_index()
+create_hist_plot(df_grouped1, 'continent', 'lifeExp', color='continent', 
+                 title='Average Life Exp by Continent', x_title= 'Continent', y_title='Average Life Exp')
 ```
-$ poetry install
+<img src="./img/histplot.png" height="300">
+
+**Creating area plot:**
+
 ```
-4. The set up is done, you are free to use the doeasyeda package now! Please check the function section above on how to use the package.
+df_grouped2 = df.groupby(['continent', 'year'])['population'].sum().reset_index()
+create_area_plot(df_grouped2, 'year', 'population', color='continent', 
+                 title='Total Population by Continent', x_title= 'Continent', y_title='Total Population')
+```
+<img src="./img/areaplot.png" height="300">
+
+**Creating line plot:**
+
+```
+df['gdp'] = df['gdpPercap'] * df['population']
+df_grouped3 = df.groupby(['continent', 'year'])[['population', 'gdp']].sum().reset_index()
+df_grouped3['gdpPercap'] = df_grouped3['gdp']/df_grouped3['population']
+create_line_plot(df_grouped3, 'year', 'gdpPercap', color='continent', 
+                 title=' GDP per capita by Continent', x_title= 'Continent', y_title='GDP per capita')
+```
+<img src="./img/lineplot.png" height="300">
 
 ## Documentation
 
