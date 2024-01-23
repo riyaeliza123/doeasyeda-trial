@@ -5,6 +5,7 @@
 </figure>
 
 [![ci-cd](https://github.com/UBC-MDS/doeasyeda/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/doeasyeda/actions/workflows/ci-cd.yml) [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-390/) [![codecov](https://codecov.io/gh/UBC-MDS/doeasyeda/branch/main/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/doeasyeda) [![Documentation Status](https://readthedocs.org/projects/stock_analyzer/badge/?version=latest)](https://doeasyeda.readthedocs.io/en/latest/?badge=latest) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![version](https://img.shields.io/github/v/release/UBC-MDS/doeasyeda) ![release](https://img.shields.io/github/release-date/UBC-MDS/doeasyeda)
+[![Documentation Status](https://readthedocs.org/projects/doeasyeda/badge/?version=latest)](https://doeasyeda.readthedocs.io/en/latest/?badge=latest)
 
 **doeasyeda** offers user-friendly functions for creating standard EDA plots for your data.
 ---------------------------------------------------------------------------------------
