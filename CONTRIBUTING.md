@@ -39,7 +39,7 @@ We are thrilled that you're interested in contributing to doeasyeda! Your contri
 
 ### 1. Reporting Bugs 🐛
 
- **Where to Report** : If you find a bug, please report it at our issues page: [https://github.com/UBC-MDS/group12_524/issues](https://github.com/UBC-MDS/group12_524/issues)
+ **Where to Report** : If you find a bug, please report it at our issues page: [https://github.com/UBC-MDS/doeasyeda/issues](https://github.com/UBC-MDS/doeasyeda/issues)
 
  **What to Include in Your Bug Report** :
 
@@ -51,13 +51,13 @@ We appreciate as much detail as possible so we can replicate and address the bug
 
 ### 2. Fixing Bugs 🛠️
 
- **Finding Bugs to Fix** : Browse through our [GitHub Issues](https://github.com/UBC-MDS/group12_524/issues). Look for issues tagged with both "bug" and "help wanted".
+ **Finding Bugs to Fix** : Browse through our [GitHub Issues](https://github.com/UBC-MDS/doeasyeda/issues). Look for issues tagged with both "bug" and "help wanted".
 
  **Process** : If you see an open bug you'd like to tackle, comment on the issue to let the community know you're working on it. This prevents duplicative efforts.
 
 ### 3. Implementing Features ✨
 
- **Finding Features to Implement** : Our [GitHub Issues](https://github.com/UBC-MDS/group12_524/issues) page is also the place to find new features to implement. Look for issues tagged with "enhancement" and "help wanted".
+ **Finding Features to Implement** : Our [GitHub Issues](https://github.com/UBC-MDS/doeasyeda/issues) page is also the place to find new features to implement. Look for issues tagged with "enhancement" and "help wanted".
 
  **Guidelines for Implementation** :
 
@@ -76,7 +76,7 @@ We appreciate as much detail as possible so we can replicate and address the bug
 
 ### 5. Submitting Feedback and Suggestions 💡
 
- **How to Submit Feedback** : The preferred way to submit feedback or feature suggestions is through our [Issues Page](https://github.com/UBC-MDS/group12_524/issues).
+ **How to Submit Feedback** : The preferred way to submit feedback or feature suggestions is through our [Issues Page](https://github.com/UBC-MDS/doeasyeda/issues).
 
  **Proposing a Feature** :
 
@@ -90,7 +90,7 @@ We appreciate as much detail as possible so we can replicate and address the bug
 2. Clone your fork locally:
 
    ```
-   git clone git@github.com:your_name_here/doeasyeda.git
+   git clone git@github.com:UBC-MDS/doeasyeda.git
    ```
 3. Install your local copy with Poetry, this is how you set up your fork for local development:
 
