@@ -1,3 +1,4 @@
+![](img/logo2.png)
 ```{include} ../README.md
 ```
 
